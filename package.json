@@ -1,5 +1,5 @@
 {
-  "name": "event-emitter",
+  "name": "@arnellebalane/event-emitter",
   "version": "0.0.0",
   "description": "JavaScript EventEmitter implementation",
   "main": "dist/event-emitter.js",
