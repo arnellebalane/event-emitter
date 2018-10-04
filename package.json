@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "JavaScript EventEmitter implementation",
   "main": "dist/event-emitter.js",
-  "umd:main": "dist/event-emitter.umd.js",
-  "module": "dist/event-emitter.mjs",
   "source": "event-emitter.js",
   "scripts": {
-    "build": "microbundle"
+    "prebuild": "rm -rf dist",
+    "build": "microbundle --name EventEmitter"
   },
   "keywords": [
     "event",
