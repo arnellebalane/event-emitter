@@ -1,0 +1,2 @@
+var o=function(){this.$listeners={}};o.prototype.on=function(t,s){this.$listeners[t]||(this.$listeners[t]=[]),this.$listeners[t].push(s)},o.prototype.off=function(t,s){if(this.$listeners[t]){if(s instanceof Function){var e=this.$listeners[t].indexOf(s);this.$listeners[t].splice(e,1)}this.$listeners[t].length&&s||delete this.$listeners[t]}},o.prototype.emit=function(t,s){this.$listeners[t]&&this.$listeners[t].forEach(function(t){return t(s)})},module.exports=o;
+//# sourceMappingURL=event-emitter.js.map
