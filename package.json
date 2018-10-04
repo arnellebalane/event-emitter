@@ -2,9 +2,12 @@
   "name": "event-emitter",
   "version": "1.0.0",
   "description": "JavaScript EventEmitter implementation",
-  "main": "event-emitter.js",
+  "main": "dist/event-emitter.js",
+  "umd:main": "dist/event-emitter.umd.js",
+  "module": "dist/event-emitter.mjs",
+  "source": "event-emitter.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "microbundle"
   },
   "keywords": [
     "event",
