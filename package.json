@@ -1,0 +1,23 @@
+{
+  "name": "event-emitter",
+  "version": "1.0.0",
+  "description": "JavaScript EventEmitter implementation",
+  "main": "event-emitter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "event",
+    "event-emitter"
+  ],
+  "author": "Arnelle Balane <arnellebalane@gmail.com> (https://arnellebalane.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnellebalane/event-emitter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arnellebalane/event-emitter/issues"
+  },
+  "homepage": "https://github.com/arnellebalane/event-emitter#readme"
+}
