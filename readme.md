@@ -14,7 +14,7 @@ npm install @arnellebalane/event-emitter
 Or via CDN (unpkg.com):
 
 ```html
-<script src="https://unpkg.com/@arnellebalane/event-emitter@1.0.1/dist/event-emitter.umd.js"></script>
+<script src="https://unpkg.com/@arnellebalane/event-emitter@1.1.0/dist/event-emitter.umd.js"></script>
 ```
 
 
