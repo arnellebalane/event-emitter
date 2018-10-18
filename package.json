@@ -23,8 +23,16 @@
   },
   "homepage": "https://github.com/arnellebalane/event-emitter#readme",
   "devDependencies": {
+    "@babel/core": "7.1.2",
+    "@babel/preset-env": "7.1.0",
+    "babel-tape-runner": "3.0.0",
     "microbundle": "0.6.0",
     "riteway": "3.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "publishConfig": {
     "access": "public"
