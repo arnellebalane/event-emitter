@@ -6,7 +6,8 @@
   "source": "event-emitter.js",
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "microbundle --name EventEmitter"
+    "build": "microbundle --name EventEmitter",
+    "test": "babel-tape-runner event-emitter.tests.js | tap-color"
   },
   "keywords": [
     "event",
