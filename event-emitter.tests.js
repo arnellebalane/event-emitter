@@ -71,6 +71,13 @@ describe('EventEmitter#off', async assert => {
         actual: instance.$listeners['name'],
         expected: undefined
     });
+
+    assert({
+        given: 'an unknown event name',
+        should: 'not do anything and return undefined',
+        actual: instance.off('unknown'),
+        expected: undefined
+    });
 });
 
 describe('EventEmitter#emit', async assert => {
@@ -111,5 +118,12 @@ describe('EventEmitter#emit', async assert => {
         should: 'not pass anything to the callback functions for the event',
         actual: callback2.calledOnceWithExactly(),
         expected: true
+    });
+
+    assert({
+        given: 'an unknown event name',
+        should: 'not do anything and return undefined',
+        actual: instance.emit('unknown', 'data'),
+        expected: undefined
     });
 });
