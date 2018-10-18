@@ -23,6 +23,9 @@ export default class EventEmitter {
 
     emit(name, data) {
         if (!this.$listeners[name]) return;
-        this.$listeners[name].forEach(callback => callback(data));
+        const hasData = arguments.length > 1;
+        this.$listeners[name].forEach(
+            callback => hasData ? callback(data) : callback()
+        );
     }
 }
