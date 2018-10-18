@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/arnellebalane/event-emitter#readme",
   "devDependencies": {
-    "microbundle": "0.6.0"
+    "microbundle": "0.6.0",
+    "riteway": "3.0.0"
   },
   "publishConfig": {
     "access": "public"
