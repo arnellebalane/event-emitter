@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "microbundle --name EventEmitter",
-    "test": "nyc --reporter=html -x *.tests.js babel-tape-runner event-emitter.tests.js | tap-color"
+    "test": "nyc -r html -x *.tests.js babel-tape-runner event-emitter.tests.js | tap-color && nyc report"
   },
   "keywords": [
     "event",
