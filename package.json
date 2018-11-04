@@ -42,7 +42,9 @@
     ]
   },
   "eslintConfig": {
-    "extends": ["eslint-config-arnellebalane"],
+    "extends": [
+      "eslint-config-arnellebalane"
+    ],
     "parserOptions": {
       "sourceType": "module",
       "ecmaVersion": 2017,
