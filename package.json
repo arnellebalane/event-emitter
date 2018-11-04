@@ -7,7 +7,8 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "microbundle --name EventEmitter",
-    "test": "nyc -r html -x *.tests.js babel-tape-runner event-emitter.tests.js | tap-color && nyc report"
+    "test": "nyc -r html -x *.tests.js babel-tape-runner event-emitter.tests.js | tap-color && nyc report",
+    "lint": "eslint *.js"
   },
   "keywords": [
     "event",
@@ -39,6 +40,16 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "eslintConfig": {
+    "extends": ["eslint-config-arnellebalane"],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2017,
+      "ecmaFeatures": {
+        "modules": true
+      }
+    }
   },
   "publishConfig": {
     "access": "public"
