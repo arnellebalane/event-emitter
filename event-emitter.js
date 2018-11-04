@@ -11,7 +11,9 @@ export default class EventEmitter {
     }
 
     off(name, callback) {
-        if (!this.$listeners[name]) return;
+        if (!this.$listeners[name]) {
+            return;
+        }
         if (callback instanceof Function) {
             const index = this.$listeners[name].indexOf(callback);
             this.$listeners[name].splice(index, 1);
@@ -22,10 +24,10 @@ export default class EventEmitter {
     }
 
     emit(name, data) {
-        if (!this.$listeners[name]) return;
+        if (!this.$listeners[name]) {
+            return;
+        }
         const hasData = arguments.length > 1;
-        this.$listeners[name].forEach(
-            callback => hasData ? callback(data) : callback()
-        );
+        this.$listeners[name].forEach(callback => (hasData ? callback(data) : callback()));
     }
 }

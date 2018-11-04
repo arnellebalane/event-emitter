@@ -2,6 +2,7 @@ import {describe} from 'riteway';
 import sinon from 'sinon';
 import EventEmitter from './event-emitter';
 
+// eslint-disable-next-line require-await
 describe('EventEmitter#constructor', async assert => {
     const instance = new EventEmitter();
 
@@ -13,32 +14,34 @@ describe('EventEmitter#constructor', async assert => {
     });
 });
 
+// eslint-disable-next-line require-await
 describe('EventEmitter#on', async assert => {
     const instance = new EventEmitter();
 
-    const callback = () => {};
+    const callback = () => { /* Intentionally empty. */ };
     instance.on('name', callback);
 
     assert({
         given: 'an event name and callback function',
         should: 'create a listeners array in $listeners with event name as key',
-        actual: instance.$listeners['name'] instanceof Array,
+        actual: instance.$listeners.name instanceof Array,
         expected: true
     });
 
     assert({
         given: 'an event name and callback function',
         should: 'add the callback in the listeners array',
-        actual: instance.$listeners['name'],
+        actual: instance.$listeners.name,
         expected: [callback]
     });
 });
 
+// eslint-disable-next-line require-await
 describe('EventEmitter#off', async assert => {
     const instance = new EventEmitter();
 
-    const callback1 = () => {};
-    const callback2 = () => {};
+    const callback1 = () => { /* Intentionally empty. */ };
+    const callback2 = () => { /* Intentionally empty. */ };
     instance.on('name', callback1);
     instance.on('name', callback2);
 
@@ -47,7 +50,7 @@ describe('EventEmitter#off', async assert => {
     assert({
         given: 'an event name and callback function',
         should: 'remove the the callback from the listeners array',
-        actual: instance.$listeners['name'],
+        actual: instance.$listeners.name,
         expected: [callback2]
     });
 
@@ -56,7 +59,7 @@ describe('EventEmitter#off', async assert => {
     assert({
         given: 'there are no more callbacks for event name',
         should: 'delete the listeners array for event name',
-        actual: instance.$listeners['name'],
+        actual: instance.$listeners.name,
         expected: undefined
     });
 
@@ -68,7 +71,7 @@ describe('EventEmitter#off', async assert => {
     assert({
         given: 'only an event name',
         should: 'delete the listeners array for event name',
-        actual: instance.$listeners['name'],
+        actual: instance.$listeners.name,
         expected: undefined
     });
 
@@ -80,6 +83,7 @@ describe('EventEmitter#off', async assert => {
     });
 });
 
+// eslint-disable-next-line require-await
 describe('EventEmitter#emit', async assert => {
     const instance = new EventEmitter();
 
