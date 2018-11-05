@@ -1,16 +1,20 @@
+// @flow
+
 export default class EventEmitter {
+    $listeners: Object
+
     constructor() {
         this.$listeners = {};
     }
 
-    on(name, callback) {
+    on(name: string, callback: Function): void {
         if (!this.$listeners[name]) {
             this.$listeners[name] = [];
         }
         this.$listeners[name].push(callback);
     }
 
-    off(name, callback) {
+    off(name: string, callback: ?Function): void {
         if (!this.$listeners[name]) {
             return;
         }
@@ -23,7 +27,7 @@ export default class EventEmitter {
         }
     }
 
-    emit(name, data) {
+    emit(name: string, data: ?any): void {
         if (!this.$listeners[name]) {
             return;
         }

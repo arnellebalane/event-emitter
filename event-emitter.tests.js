@@ -1,3 +1,5 @@
+// @flow
+
 import {describe} from 'riteway';
 import sinon from 'sinon';
 import EventEmitter from './event-emitter';
