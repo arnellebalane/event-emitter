@@ -8,7 +8,8 @@
     "prebuild": "rm -rf dist",
     "build": "microbundle --name EventEmitter",
     "test": "nyc -r html -x *.tests.js babel-tape-runner event-emitter.tests.js | tap-color && nyc report",
-    "lint": "eslint *.js"
+    "lint": "eslint *.js",
+    "flow": "flow"
   },
   "keywords": [
     "event",
