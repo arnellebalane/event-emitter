@@ -14,7 +14,7 @@ export default class EventEmitter {
         this.$listeners[name].push(callback);
     }
 
-    off(name: string, callback: ?Function): void {
+    off(name: string, callback?: Function): void {
         if (!this.$listeners[name]) {
             return;
         }
@@ -27,7 +27,7 @@ export default class EventEmitter {
         }
     }
 
-    emit(name: string, data: ?any): void {
+    emit(name: string, data?: mixed): void {
         if (!this.$listeners[name]) {
             return;
         }
